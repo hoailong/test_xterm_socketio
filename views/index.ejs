@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+	<script src="term.js"></script>
+	<script src="client.js"></script>
+	<style type="text/css">
+	.terminal {
+		font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+		font-size: 11px;
+		color: rgb(240, 240, 240);
+		background: #383734 !important; 
+		padding: 3px;
+		border: none !important;
+	}
+
+
+	
+	</style>
+</head>
+<body>
+	<div id="terminal"></div>
+	<script>
+		var e = document.getElementById("terminal");
+		client.run({
+			parent: e,
+			remote: "http://localhost:8080/"
+		})
+	</script>
+</body>
+</html>
